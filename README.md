@@ -9,7 +9,7 @@ Follow the bellow steps to install the application:
 1. download the repository
 
     ```bash
-    git clone https://gitea.msapp.info/kroberg/enfis.git
+    git clone https://github.com/nemanjarasicn/nemanja-rasic-fatcat-task.git
     ```
 
 2. install requirments
