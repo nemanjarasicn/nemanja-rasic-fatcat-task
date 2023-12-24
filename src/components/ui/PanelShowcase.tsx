@@ -1,6 +1,9 @@
+import React from 'react';
 import clsx from 'clsx';
 
-export const PanelShowcase = ({ items }) => {
+import { PanelShowcaseProps } from '@homework-task/models/app.models';
+
+export const PanelShowcase = ({ items }: PanelShowcaseProps) => {
     return (
         <div className={clsx('flex', 'justify-center', 'items-center')}>
             <div
