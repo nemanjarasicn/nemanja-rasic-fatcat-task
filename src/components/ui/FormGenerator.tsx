@@ -1,9 +1,9 @@
 import React from 'react';
 import { useMutation, useQueryClient } from 'react-query';
 import axios from 'axios';
-import { useForm, SubmitHandler, FieldValues } from 'react-hook-form';
+import { useForm, SubmitHandler, UseFormReturn } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { object, string, infer, ZodType } from 'zod';
+import { object, string } from 'zod';
 import { Button } from '@homework-task/components/ui/Button';
 import { RingLoader } from 'react-spinners';
 
@@ -52,12 +52,7 @@ const createPost = async (data: FormDataValues) => {
     }
 };
 
-const CreateForm = ({
-    useMutation: mutationHook,
-    renderForm,
-    validationSchema,
-    successMessage,
-}: CreateFormProps) => {
+const CreateForm = ({ renderForm, validationSchema }: CreateFormProps) => {
     const queryClient = useQueryClient();
     const { register, handleSubmit, formState, reset } =
         useForm<FormDataValues>({

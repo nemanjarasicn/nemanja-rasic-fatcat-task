@@ -17,12 +17,6 @@ import {
 
 type LayoutType = React.FC<LayoutProps>;
 
-type ComponentType =
-    | React.FC<HeroProps>
-    | React.FC<ItemsShowcaseProps>
-    | React.FC<TrustBarProps>
-    | React.FC<ButtonProps>;
-
 type LayoutMap = Record<string, LayoutType>;
 type ComponentMap = Record<string, any>;
 
@@ -31,7 +25,7 @@ export const layoutMap: LayoutMap = {
     // Add more layout as needed
 };
 
-export const componentMap: Record<string, any> = {
+export const componentMap: ComponentMap = {
     componentHero: Hero as React.FC<HeroProps>,
     componentItemsShowcase: ItemsShowcase as React.FC<ItemsShowcaseProps>,
     componentTrustBar: TrustBar as React.FC<TrustBarProps>,
